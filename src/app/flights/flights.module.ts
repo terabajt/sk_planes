@@ -6,6 +6,9 @@ import { MaterialModule } from '../material/material.module';
 import { NewFlightComponent } from './new-flight/new-flight.component';
 import { FlightFormComponent } from './flight-form/flight-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
+import { EditFlightsComponent } from './edit-flights/edit-flights.component';
+import { FlightsRoutingModule } from './flights-routing.module';
 
 
 
@@ -14,14 +17,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FlightsComponent,
     FlightCardComponent,
     NewFlightComponent,
-    FlightFormComponent
+    FlightFormComponent,
+    DetailsComponent,
+    EditFlightsComponent,
   ],
-  entryComponents: [NewFlightComponent],
+  entryComponents: [NewFlightComponent, DetailsComponent],
   imports: [
     CommonModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlightsRoutingModule
   ],
   exports: [FlightsComponent]
 })

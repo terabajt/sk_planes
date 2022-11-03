@@ -36,7 +36,11 @@
     </div>
     <div class="wor">
         <div class="col-sm-8">
-            <textarea matInput placeholder="Additional Information" formControlName="additionalInformation"></textarea>
+            <mat-form-field>
+                <textarea matInput placeholder="Additional Information"
+                    formControlName="additionalInformation"></textarea>
+
+            </mat-form-field>
         </div>
     </div>
     <div class="row">
@@ -75,4 +79,4 @@
         </div>
     </div>
 </form>
-<pre> {{ form.value | json }}</pre>
+<!-- <pre> {{ form.value | json }}</pre> -->

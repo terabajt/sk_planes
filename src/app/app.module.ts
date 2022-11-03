@@ -10,6 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { FlightsModule } from './flights/flights.module';
+import {  AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { FlightsModule } from './flights/flights.module';
     AppRoutingModule, 
     CoreModule,
     AngularFireDatabaseModule,
-    FlightsModule
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
