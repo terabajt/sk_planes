@@ -8,7 +8,7 @@ import { AuthService } from '../services/auth.services';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  user = this.authService?.user;
+  user = this.authService.user;
 constructor(private authService: AuthService,
   private router: Router,
 

@@ -7,10 +7,10 @@ import { NewFlightComponent } from './new-flight/new-flight.component';
 import { FlightFormComponent } from './flight-form/flight-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
-import { EditFlightsComponent } from './edit-flights/edit-flights.component';
+
 import { FlightsRoutingModule } from './flights-routing.module';
-
-
+import { EditFlightComponent } from './edit-flights/edit-flights.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { FlightsRoutingModule } from './flights-routing.module';
     NewFlightComponent,
     FlightFormComponent,
     DetailsComponent,
-    EditFlightsComponent,
+    EditFlightComponent,
   ],
   entryComponents: [NewFlightComponent, DetailsComponent],
   imports: [
@@ -27,8 +27,9 @@ import { FlightsRoutingModule } from './flights-routing.module';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    FlightsRoutingModule
+    FlightsRoutingModule,
+    MatDialogModule,
   ],
-  exports: [FlightsComponent]
+  exports: [FlightsComponent],
 })
-export class FlightsModule { }
+export class FlightsModule {}

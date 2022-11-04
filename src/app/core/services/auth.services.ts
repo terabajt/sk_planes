@@ -9,9 +9,9 @@ export interface Credentials {
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  //private userData?: firebase.User | null;
+  private userData: firebase.User | null;
   readonly authState$ = this.fireAuth.authState;
-  readonly userData$ = this.fireAuth.authState;
+  //readonly userData$ = this.fireAuth.authState;
 
   constructor(private fireAuth: AngularFireAuth) {}
   login(credentials: Credentials) {
@@ -31,10 +31,10 @@ export class AuthService {
     return this.fireAuth.signOut();
   }
   get user() {
-    return this.userData$;
+    return this.userData;
   }
 
   isLoggedIn() {
-    return !!this.userData$;
+    return !this.userData;
   }
 }

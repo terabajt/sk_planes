@@ -8,7 +8,7 @@ import { Flight } from 'src/app/models/flight.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FlightCardComponent {
-  @Input() flight!: Flight;
+  @Input() flight: Flight;
   
   constructor(private cd: ChangeDetectorRef) {
     
