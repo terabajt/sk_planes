@@ -1,8 +1,8 @@
 <mat-toolbar color="primary">
     <div class="container">
       <img src="./assets/images/logo_sk.png" class="logo" routerLink="/dashboard">
-      <mat-icon class="logout-icon float-right" (click)="logout()">power_settings_new</mat-icon>
-      <span class="user-login float-right"  *ngIf="user$ | async as user">Hello, {{ user.email }}</span>
+      <mat-icon class="logout-icon float-end" (click)="logout()">power_settings_new</mat-icon>
+      <span class="user-login float-end"  *ngIf="user$ | async as user">Hello, {{ user.email }}</span>
     </div>
   </mat-toolbar>
   <div class="container">
